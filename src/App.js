@@ -4,10 +4,10 @@ function App() {
   return (
     <>
       <div className="father">
-        <div className="header"></div>
-        <div className="content"></div>
-        <div className="nav"></div>
-        <div className="footer"></div>
+        <div className="header">header</div>
+        <div className="content">content</div>
+        <div className="nav">nav</div>
+        <div className="footer">footer</div>
       </div>
     </>
   );

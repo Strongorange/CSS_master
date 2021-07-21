@@ -80,3 +80,45 @@ grid-template:
 "content content content nav" 2fr
 "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr; //repeat 사용불가
 / 뒤 부분에서 columns 의 크기를 지정 "~~" 뒷부분 fr 은 row 의 크기 (높이) 지정
+
+## Place Items
+
+- justify-items, align-items
+  그리드 컨테이너에 적용하는 속성, 어떤 콘텐츠도 없다면 (높이도 지정되어있지 않다면) 아무것도 보이지 않아 적용되지 않는것처럼 보임, grid child 에 height,width 로 기본 크기를 지정했다면 strect는 먹히지 않음!
+
+  -justify-items
+  기본값은 stretch => 그리드 컨테이너가 그리드를 가지고있고 그리드 child 를 늘려서 그리드 컨테이너를 채우게 함
+  값을 start 로 한다면 그리드 child 가 다 차는게 아니라 왼쪽만 조금 차있음
+  center 는 가운데만 조금 end 는 오른쪽만 조금
+
+  -align-items
+  flex 와 동일하게 cross-axis 에 작용
+
+- place-items => 지름길
+  첫번째는 수평, 그 다음에는 수직
+  place-items: strecth center => 위로 쭉 늘어나고 그리드의 가운데에 아이템이 옴
+
+## Place Content
+
+위의 items 속성들은 그리드 안에있는 cell (각각의 네모) 에 적용하는 속성
+content 속성은 그리드 자체에 적용하는 속성 (ex) 4 \* 4 그리드 자체에 대한 속성
+
+- justify-content
+  justify-content: center 로하면 grid 자체를 가운데로 옮김!
+  Grid 로 설정한 div 는 width 100% 로 되어있는데 div 안에서의 grid 위치를 바꿈
+  horizontal (수평) 에 적용되는 속성
+
+- align-content
+  cross-axis (기본으로는 수직) 에 적용되는 속성
+  align-content : space-between 으로하면 그리드 rows 가 서로 멀어져서 정렬!
+
+- place-content => 지름길
+  place-items 과 동일하게 수직, 수평 순서
+
+## Align-self, justify-self => place-self
+
+child 에서 사용하고 사용한 child 에게만 적용되는 속성
+개별적으로 움직이는 것 외에는 별 것 없음
+마찬가지고 지름길인 place-self: 수직 수평 사용가능
+
+## Auto Columns and Rows
