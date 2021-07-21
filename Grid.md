@@ -159,3 +159,17 @@ grid-template-columns: repeat(5, minmax(200px, 1fr)); 를 사용했다면
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   5개의 아이템이 들어오면 5개로 column 를 다 채운 5 column 을 가진 그리드가 만들어짐
   유동적인 사이즈를 추구
+
+## min-content, max-content
+
+- min-content
+  item 이 들어갈 수 있는 최대한 작은 크기를 가짐
+
+- max-content
+  item 의 크기와 딱 맞게 크기를 가짐
+
+이제 박스의 사이즈에 연연하기보다 컨텐츠에 신경쓸 수 있음!
+minmax, repeat 를 결합하면 반응형을 구현할 수 있음!
+grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
+column 은 auto-fit 으로 아이템에 맞춰서 화면을 꽉채우게되고
+그리드 아이템의 크기는 최소 20px 를 보장받으면서 최대 아이템의 컨텐츠를 표시할 수 있는 지점까지의 사이즈를 가짐
