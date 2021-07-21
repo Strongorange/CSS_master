@@ -136,3 +136,10 @@ grid-template-rows: repeat(4, 100px);
   flex-direction 을 바꾸는 것과 비슷하게 grid 의 flow 를 column 으로 바꾸면
   수평으로 1,2,3,4 가던데 수직으로 1,2,3,4 로 되고 데이터가 지정한 것보다 추가되면 column 가 생기는 것 처럼 보임
   이 상태엣 grid-auto-column 를 지정해주면 실제로 column 가 생기게됨!
+
+## minmax
+
+어떤 요소가 아주 크게 보이길 원하는데 최소한의 크기는 보장하고 싶을때
+브라우저의 가로를 줄이면 그리드 item 들이 shrink 되서 작아짐 이럴때
+grid-template-columns: repeat(5, minmax(200px, 1fr)); 를 사용했다면
+위의 그리드에서 각각 그리드 cell 은 최소한 200px 의 크기는 보장받음 => 기본에 200px 보다 작아지는 지점에서 마우스 가로 스크롤이 생김
