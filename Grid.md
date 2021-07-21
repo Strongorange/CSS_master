@@ -49,6 +49,14 @@ flex 와 마찬가지고 grid 도 father 에서 선언되고 father 에 옵션�
       몇칸을 먹는지를 적어줌
       grid-column: span 4;
 
+    - grid-area
+      grid-column와 grid-row 모두를 입력하는게 너무 많은경우, 다른 속성을 이용하여 줄일 수 있습니다. grid-area은 /(슬래쉬)로 구분지어 grid-row-start, grid-column-start, grid-row-end, grid-column-end순으로 입력 가능합니다.
+      한가지로 예로 다음과 같습니다. grid-area: 1 / 1 / 3 / 6;
+
+    - grid-template
+      grid-template은 grid-template-rows와 grid-template-columns를 조합한 단축 속성입니다.
+      예를 들어, grid-template: 50% 50% / 200px;은 각각 50% 인 두개의 행(row)과 200px 너비의 한개의 열(column)의 그리드를 생성합니다.
+
 ## 라인에 이름짓기
 
 - [라인 이름] 으로 이름지을 수 있음
@@ -80,6 +88,8 @@ grid-template:
 "content content content nav" 2fr
 "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr; //repeat 사용불가
 / 뒤 부분에서 columns 의 크기를 지정 "~~" 뒷부분 fr 은 row 의 크기 (높이) 지정
+
+grid-template: 50% 50% / 200px;은 각각 50% 인 두개의 행(row)과 200px 너비의 한개의 열(column)의 그리드를 생성합니다.
 
 ## Place Items
 
