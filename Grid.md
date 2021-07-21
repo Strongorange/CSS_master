@@ -122,3 +122,17 @@ child 에서 사용하고 사용한 child 에게만 적용되는 속성
 마찬가지고 지름길인 place-self: 수직 수평 사용가능
 
 ## Auto Columns and Rows
+
+grid-template-columns: repeat(4, 100px);
+grid-template-rows: repeat(4, 100px);
+이렇게 지정된 grid 에서 만약 grid 안에 item 이 40개 들어가면 어떻게될까?
+4 4 그리드여서 16개까지 지정되엇는데 이를 넘어가는 아이템이 그리드에 들어가게되면 그리드가 정상적으로 나오지 않음! 이를해결해야함
+
+- Grid-auto-rows
+  grid-auto-row: 100px 로하면 100px rows 를 가지는 그리드 셀이 자동적으로 추가됨
+  auto-row 를 사용하면 grid-template-rows 가 굳이 필요없음
+
+- Grid-auto-flow
+  flex-direction 을 바꾸는 것과 비슷하게 grid 의 flow 를 column 으로 바꾸면
+  수평으로 1,2,3,4 가던데 수직으로 1,2,3,4 로 되고 데이터가 지정한 것보다 추가되면 column 가 생기는 것 처럼 보임
+  이 상태엣 grid-auto-column 를 지정해주면 실제로 column 가 생기게됨!
