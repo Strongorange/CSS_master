@@ -143,3 +143,19 @@ grid-template-rows: repeat(4, 100px);
 브라우저의 가로를 줄이면 그리드 item 들이 shrink 되서 작아짐 이럴때
 grid-template-columns: repeat(5, minmax(200px, 1fr)); 를 사용했다면
 위의 그리드에서 각각 그리드 cell 은 최소한 200px 의 크기는 보장받음 => 기본에 200px 보다 작아지는 지점에서 마우스 가로 스크롤이 생김
+
+## auto-fit, auto-fill
+
+반응형을 간단하게 만들 수 있음
+오직 repeat() 안에서만 사용할 것
+
+- auto-fill
+  5개의 아이템이 있다고했을때
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  인 그리드는 수많은 cell 중에 5개만 딱 채워서 들어감 ex) => 공간이 남음
+  보다 정확한 사이즈를 추구
+
+- auto-fit
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  5개의 아이템이 들어오면 5개로 column 를 다 채운 5 column 을 가진 그리드가 만들어짐
+  유동적인 사이즈를 추구
