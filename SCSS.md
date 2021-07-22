@@ -37,3 +37,16 @@ css 를 함수처럼 사용할 수 있음! Wow
 http://megaton111.cafe24.com/2017/01/13/sass-%EB%AC%B8%EB%B2%95-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0import-%EC%83%81%EC%86%8Dextend-%EB%AF%B9%EC%8A%A4%EC%9D%B8mixin/
 같은 코드를 중복하고싶지 않을때 => Class 와 비슷한 사용
 ex) a 와 button 이 서로 매우매우 많은 css 속성을 공유할때
+
+# Mixin Librarys , @content
+
+responsive 라는 믹스인을 만들고 미디어 쿼리를 생성함
+믹스인에서 @content 는
+@include responsive("tablet") {
+color: green;
+}
+
+color: green; 부분이 @content 에 해당함 즉 해당하는 미디어쿼리에서 @content 속성을 준다고 생각!
+
+매우 많은 scsss mixin 라이브러리가 존재, 좋은 라이브러리를 사용하면 매우 편리!
+https://github.com/colourgarden/awesome-scss
