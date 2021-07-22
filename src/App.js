@@ -1,23 +1,19 @@
-import "./App.css";
+import "./scss/styles.scss";
+import styled from "styled-components";
+
+const Container = styled.div``;
+
+const Title = styled.h2``;
 
 function App() {
   return (
     <>
-      <div className="grid">
-        <div className="item">This is a very long text</div>
-        <div class="item">This is a very long text</div>
-        <div class="item">This is a very longer longer long text</div>
-        <div class="item">This is a text</div>
-        <div class="item">
-          Not long at all, or maybe, who knows? Maybe you know, love you.
-        </div>
-        <div class="item">This is a very long text</div>
-        <div class="item">This is a very long text</div>
-        <div class="item">This is a very long text</div>
-        <div class="item">This is a very long text</div>
-        <div class="item">This is a very long text</div>
-        <div class="item">This is a very long text</div>
-      </div>
+      <Container className="box">
+        <Title>Title</Title>
+        <Container>
+          <Title>Another Title</Title>
+        </Container>
+      </Container>
     </>
   );
 }
