@@ -9,11 +9,8 @@ function App() {
   return (
     <>
       <div>
-        <span>Google</span>
-        <span>Face</span>
-        <span>네이버</span>
-        <span>라인</span>
-        <span>야후</span>
+        <a>log in</a>
+        <button>log out</button>
       </div>
     </>
   );
