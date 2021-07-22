@@ -25,3 +25,8 @@ color: red;
 
 처럼 네스팅 가능!
 & => 부모 선택자 https://abcdqbbq.tistory.com/81
+
+# Mixin
+
+https://www.codingfactory.net/10110
+css 를 함수처럼 사용할 수 있음! Wow

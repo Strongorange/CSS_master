@@ -8,12 +8,13 @@ const Title = styled.h2``;
 function App() {
   return (
     <>
-      <Container className="box">
-        <Title>Title</Title>
-        <Container>
-          <Title>Another Title</Title>
-        </Container>
-      </Container>
+      <div>
+        <span>Google</span>
+        <span>Face</span>
+        <span>네이버</span>
+        <span>라인</span>
+        <span>야후</span>
+      </div>
     </>
   );
 }
